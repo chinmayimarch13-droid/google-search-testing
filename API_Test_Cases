@@ -1,0 +1,96 @@
+TC01 – Verify Search API with Valid Keyword
+Test Case ID: TC01
+
+Title:
+Verify search API with valid keyword
+
+Request:
+GET /search?q=selenium
+
+Expected Result:
+- Status code should be 200
+- Relevant search results should return
+- Response should contain search keyword data
+TC02 – Verify Search API with Blank Input
+Test Case ID: TC02
+
+Title:
+Verify search API with blank keyword
+
+Request:
+GET /search?q=
+
+Expected Result:
+- Validation error should appear
+OR
+- Empty response should return
+- API should not crash
+TC03 – Verify Search API with Special Characters
+Test Case ID: TC03
+
+Title:
+Verify search API using special characters
+
+Request:
+GET /search?q=@@@@
+
+Expected Result:
+- API should handle request properly
+- Proper response should return
+- No server error
+TC04 – Verify Search API with Long Input
+Test Case ID: TC04
+
+Title:
+Verify search API with very long keyword
+
+Request:
+GET /search?q=verylongsearchtext......
+
+Expected Result:
+- API should process request successfully
+- No performance degradation
+TC05 – Verify Search API Response Time
+Test Case ID: TC05
+
+Title:
+Verify search API response performance
+
+Expected Result:
+- API response should return within acceptable time
+TC06 – Verify Invalid Endpoint Handling
+Test Case ID: TC06
+
+Title:
+Verify invalid search endpoint
+
+Request:
+GET /wrongsearch
+
+Expected Result:
+- Status code should be 404
+- Proper error message should display
+TC07 – Verify SQL Injection Handling
+Test Case ID: TC07
+
+Title:
+Verify API security against SQL injection
+
+Request:
+GET /search?q=' OR 1=1 --
+
+Expected Result:
+- Request should be blocked or sanitized
+- No database exposure
+TC08 – Verify Numeric Search Input
+Test Case ID: TC08
+
+Title:
+Verify search API using numeric values
+
+Request:
+GET /search?q=123456
+
+Expected Result:
+- Relevant results should return
+- API should process request successfully
