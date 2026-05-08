@@ -3,3 +3,8 @@ Search blank input
 Search special characters
 Search long text
 Search suggestions
+Test Cases:-
+TC01 - Verify Google search with valid keyword
+TC02 - Verify search with blank input
+TC03 - Verify special character search
+TC04 - Verify search suggestions
